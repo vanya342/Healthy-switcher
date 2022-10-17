@@ -237,9 +237,19 @@ $margin_slide: 0 0 50px 0;
 
         }
       }
+
       &__item:not(:last-child) {
         margin: 0 15px 0 0;
       }
+
+      @media (max-width: 380.8px) {
+
+        &__item{
+          font-size: 20px;
+        }
+
+      }
+
     }
 
     @media (max-width: 730.8px) {
@@ -522,6 +532,30 @@ $margin_slide: 0 0 50px 0;
 
   }
 
+  @media (max-width: 380.8px) {
+
+    &__title {
+      font-size: 24px;
+      line-height: 40px;
+    }
+
+    &__subtitle{
+      font-size: 12px;
+      line-height: 22px;
+    }
+
+    &__button{
+      a{
+
+        font-size: 16px;
+
+        padding: 15px 30px;
+      }
+    }
+
+
+  }
+
 }
 
 .main {
@@ -691,6 +725,14 @@ $margin_slide: 0 0 50px 0;
 
         &__item {
           flex: 0 1 60%;
+        }
+
+      }
+
+      @media (max-width: 380.8px) {
+
+        &__item {
+          flex: 0 1 70%;
         }
 
       }
@@ -946,6 +988,14 @@ $margin_slide: 0 0 50px 0;
             ul{
               margin: 0 0 0 0;
             }
+          }
+
+        }
+
+        @media (max-width: 380.8px) {
+
+          &__title{
+            font-size: 30px;
           }
 
         }
@@ -1258,185 +1308,202 @@ $margin_slide: 0 0 50px 0;
 
       }
 
-          // .recipes-menu__left-block
-    &__left-block {
-      min-height: 100%;
-      min-width: 100%;
+      // .recipes-menu__left-block
+      &__left-block {
+        min-height: 100%;
+        min-width: 100%;
 
-      & .item-recipes{
-        height: 100%;
-
-        .item-recipes__title{
+        & .item-recipes{
           height: 100%;
 
+          .item-recipes__title{
+            height: 100%;
+          }
+
+          & .item-recipes__wrap{
+
+            background: url(../img/main/recipes-from-our-chefs/content-recipes/background/main-item_img.png) center / cover no-repeat;
+
+            height: 100%;
+          }
+
+          @media (max-width: 380.8px) {
+
+            &__link-bold{
+
+              display: none;
+
+            }
+
+          }
+
+        }
+
       }
 
-      & .item-recipes__wrap{
-        // background: url(../img/main/recipes-from-our-chefs/content-recipes/background/main-item_img.png) center / cover no-repeat;
+      // .recipes-menu__right-block
+      &__right-block {
+        min-height: 100%;
+        min-width: 100%;
 
-        background: url(../img/main/recipes-from-our-chefs/content-recipes/background/main-item_img.png) center / cover no-repeat;
-
-        height: 100%;
-      }
-      }
-    }
-
-    // .recipes-menu__right-block
-    &__right-block {
-      min-height: 100%;
-      min-width: 100%;
-
-      display: flex;
-      flex-direction: column;
-      row-gap: 40px;
-
-      & .item-recipes {
         display: flex;
+        flex-direction: column;
+        row-gap: 40px;
 
-        // .item-recipes__wrap
-        &__wrap {
-          width: 100%;
-        }
+        & .item-recipes {
+          display: flex;
 
-        // .item-recipes__link
-        &__link {
-          position: absolute;
-          left: 5%;
-          bottom: 5%;
+          // .item-recipes__wrap
+          &__wrap {
+            width: 100%;
+          }
 
-          margin: 0;
-        }
+          // .item-recipes__link
+          &__link {
+            position: absolute;
+            left: 5%;
+            bottom: 5%;
 
-        // .item-recipes__data
-        &__data {
-          position: absolute;
-          left: 35%;
-          bottom: 12%;
+            margin: 0;
+          }
 
-          margin: 0;
-        }
+          // .item-recipes__data
+          &__data {
+            position: absolute;
+            left: 35%;
+            bottom: 12%;
 
-        // .item-recipes__title
-        &__title {
-          font-size: 18px;
-          margin: 0 0 20px 0;
-          max-width: 100%;
-        }
+            margin: 0;
+          }
 
-        // .item-recipes__subtitle
-        &__subtitle {
-          display: none;
-        }
+          // .item-recipes__title
+          &__title {
+            font-size: 18px;
+            margin: 0 0 20px 0;
+            max-width: 100%;
+          }
 
-        // .item-recipes__social
-        &__social {
-          position: absolute;
-          right: 5%;
-          bottom: 5%;
-        }
+          // .item-recipes__subtitle
+          &__subtitle {
+            display: none;
+          }
 
-        .social{
+          // .item-recipes__social
+          &__social {
+            position: absolute;
+            right: 5%;
+            bottom: 5%;
+          }
+
+          .social{
+
+            @media (max-width: 855.8px) {
+
+              &__views:not(:last-child){
+                margin: 0 10px 0 0;
+              }
+
+              &__img{
+                width: 18px;
+                height: 18px;
+                padding: 5px;
+              }
+
+            }
+
+          }
 
           @media (max-width: 855.8px) {
 
-            &__views:not(:last-child){
-              margin: 0 10px 0 0;
+            &__data{
+              bottom: 9%;
             }
 
-            &__img{
-              width: 18px;
-              height: 18px;
-              padding: 5px;
+            &__social{
+              bottom: 7%;
+            }
+
+          }
+
+          @media (max-width: 730.8px) {
+
+            &__data{
+              bottom: 83%;
+            }
+
+          }
+
+          @media (max-width: 630.8px) {
+
+            &__data{
+              left: 50%;
+              bottom: 10%;
+
+              transform: translate(-50%, 0);
+            }
+
+            &__title{
+              font-size: 22px;
+            }
+
+          }
+
+          @media (max-width: 530.8px) {
+
+            &__data{
+              bottom: 82%;
+            }
+
+            &__title{
+              font-size: 20px;
+            }
+
+          }
+
+          @media (max-width: 430.8px) {
+
+            &__title{
+              font-size: 17px;
+            }
+
+          }
+
+          @media (max-width: 380.8px) {
+
+            &__title{
+              font-size: 14px;
             }
 
           }
 
         }
 
-        @media (max-width: 855.8px) {
+        @for $i from 1 to 4 {
 
-          &__data{
-            bottom: 9%;
-          }
+          & .item-recipes:nth-child(#{$i})
+          .item-recipes__wrap{
 
-          &__social{
-            bottom: 7%;
-          }
+            background: url(../img/main/recipes-from-our-chefs/content-recipes/item-recipes/background/item-recipes-#{$i}.png) center / cover no-repeat;
 
-        }
-
-        @media (max-width: 730.8px) {
-
-          &__data{
-            bottom: 83%;
-          }
-
-        }
-
-        @media (max-width: 630.8px) {
-
-          &__data{
-            left: 50%;
-            bottom: 10%;
-
-            transform: translate(-50%, 0);
-          }
-
-          &__title{
-            font-size: 22px;
-          }
-
-        }
-
-        @media (max-width: 530.8px) {
-
-          &__data{
-            bottom: 82%;
-          }
-
-          &__title{
-            font-size: 20px;
-          }
-
-        }
-
-        @media (max-width: 430.8px) {
-
-          &__title{
-            font-size: 17px;
           }
 
         }
 
       }
 
-      @for $i from 1 to 4 {
+      @media (max-width: 630.8px) {
 
-        & .item-recipes:nth-child(#{$i})
-        .item-recipes__wrap{
+        &__wrap{
+          flex-direction: column;
+          align-items: center;
+          gap: 40px;
+        }
 
-          background: url(../img/main/recipes-from-our-chefs/content-recipes/item-recipes/background/item-recipes-#{$i}.png) center / cover no-repeat;
-
+        &__content-recipes {
+          width: 75%;
         }
 
       }
-
-    }
-
-    @media (max-width: 630.8px) {
-
-      &__wrap{
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
-      }
-
-      &__content-recipes {
-        width: 75%;
-      }
-
-    }
-
 
     }
 
