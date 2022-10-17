@@ -28,7 +28,10 @@ $margin_slide: 0 0 50px 0;
   margin: 30px 0 40px 0;
 
   display: flex;
+  justify-content: center;
   position: relative;
+
+  width: 100%;
 
   align-self: center;
   text-align: center;
@@ -85,6 +88,10 @@ $margin_slide: 0 0 50px 0;
     font-size: 20px;
 
     padding: 30px 0px;
+  }
+
+  @media (max-width: 320.8px) {
+    font-size: 17px;
   }
 
 }
@@ -149,6 +156,12 @@ $margin_slide: 0 0 50px 0;
 @media (max-width: 380.8px) {
   [class *="_container"]{
     max-width: 300px;
+  }
+}
+
+@media (max-width: 320.8px) {
+  [class *="_container"]{
+    max-width: 260px;
   }
 }
 
@@ -556,6 +569,28 @@ $margin_slide: 0 0 50px 0;
 
   }
 
+  @media (max-width: 320.8px) {
+
+    &__title {
+      font-size: 22px;
+    }
+
+    &__subtitle{
+      line-height: 20px;
+    }
+
+    &__button{
+      a{
+
+        font-size: 16px;
+
+        padding: 15px 30px;
+      }
+    }
+
+
+  }
+
 }
 
 .main {
@@ -733,6 +768,19 @@ $margin_slide: 0 0 50px 0;
 
         &__item {
           flex: 0 1 70%;
+        }
+
+      }
+
+      @media (max-width: 320.8px) {
+
+        &__title {
+          font-size: 20px;
+        }
+
+
+        &__item {
+          flex: 0 1 75%;
         }
 
       }
@@ -1000,6 +1048,14 @@ $margin_slide: 0 0 50px 0;
 
         }
 
+        @media (max-width: 320.8px) {
+
+          &__title{
+            font-size: 24px;
+          }
+
+        }
+
       }
 
       @media (max-width: 1025.8px) {
@@ -1022,6 +1078,14 @@ $margin_slide: 0 0 50px 0;
           flex: 0 1 75%;
 
           padding: 20px 10px;
+        }
+
+      }
+
+      @media (max-width: 320.8px) {
+
+        &__item {
+          flex: 0 1 80%;
         }
 
       }
@@ -1113,41 +1177,14 @@ $margin_slide: 0 0 50px 0;
 
         }
 
-        // .item-recipes__link
-        &__link {
-          display: inline-flex;
+        // .item-recipes__after-name
+        &__after-name {
+          font-weight: bold;
+          font-size: 14px;
+          line-height: 20px;
+          color: $color_titly;
 
-          font-size: 10px;
-          align-items: center;
-          font-weight: 900;
-          line-height: 25px;
-          text-align: center;
-          letter-spacing: 1.25px;
-          text-transform: uppercase;
-
-          background-color: $color_back-link;
-
-          padding: 5px 16.5px;
-          margin: 0 0 65px 0;
-
-          border-radius: 6px;
-
-          transition: 0.5s ease;
-
-          & a {
-            color: $color_titly;
-
-          }
-
-          &:hover{
-            background-color: $color_green;
-
-            & a {
-              color: $color_back_item;
-            }
-
-          }
-
+          margin:0 0 60px 0;
         }
 
         // .item-recipes__data
@@ -1168,18 +1205,45 @@ $margin_slide: 0 0 50px 0;
           text-align: center;
           color: $color_titly;
 
-          margin: 0 0 45px 0;
+          margin: 0 0 65px 0;
           max-width: 65%;
         }
 
-        // .item-recipes__subtitle
-        &__subtitle {
-          font-weight: bold;
-          font-size: 14px;
-          line-height: 20px;
-          color: $color_titly;
+        // .item-recipes__link
+        &__link {
+          display: inline-flex;
 
-          margin:0 0 60px 0;
+          font-size: 10px;
+          align-items: center;
+          font-weight: 900;
+          line-height: 25px;
+          text-align: center;
+          letter-spacing: 1.25px;
+          text-transform: uppercase;
+
+          background-color: $color_back-link;
+
+          padding: 5px 16.5px;
+          margin: 0 0 40px 0;
+
+          border-radius: 6px;
+
+          transition: 0.5s ease;
+
+          & a {
+            color: $color_titly;
+
+          }
+
+          &:hover{
+            background-color: $color_green;
+
+            & a {
+              color: $color_back_item;
+            }
+
+          }
+
         }
 
         // .item-recipes__social
@@ -1238,6 +1302,14 @@ $margin_slide: 0 0 50px 0;
 
         }
 
+        @media (max-width: 1250.8px) {
+
+          &__title {
+            max-width: 100%;
+          }
+
+        }
+
         @media (max-width: 855.8px) {
 
           &__title {
@@ -1265,10 +1337,10 @@ $margin_slide: 0 0 50px 0;
           &__link-bold{
             top: 8%;
           }
+
           &__title {
             font-size: 22px;
           }
-
 
         }
 
@@ -1294,6 +1366,10 @@ $margin_slide: 0 0 50px 0;
 
         @media (max-width: 380.8px) {
 
+          &__wrap{
+            padding: 40px 10px ;
+          }
+
           &__link {
             font-size: 8px;
 
@@ -1301,7 +1377,19 @@ $margin_slide: 0 0 50px 0;
           }
 
           &__title {
-            font-size: 14px;
+            font-size: 16px;
+          }
+
+        }
+
+        @media (max-width: 320.8px) {
+
+          &__wrap{
+            padding: 40px 5px ;
+          }
+
+          &__title {
+            font-size: 15px;
           }
 
         }
@@ -1351,20 +1439,16 @@ $margin_slide: 0 0 50px 0;
         row-gap: 40px;
 
         & .item-recipes {
-          display: flex;
+          // display: flex;
 
           // .item-recipes__wrap
           &__wrap {
             width: 100%;
           }
 
-          // .item-recipes__link
-          &__link {
-            position: absolute;
-            left: 5%;
-            bottom: 5%;
-
-            margin: 0;
+          // .item-recipes__after-name
+          &__after-name {
+            display: none;
           }
 
           // .item-recipes__data
@@ -1383,9 +1467,13 @@ $margin_slide: 0 0 50px 0;
             max-width: 100%;
           }
 
-          // .item-recipes__subtitle
-          &__subtitle {
-            display: none;
+          // .item-recipes__link
+          &__link {
+            position: absolute;
+            left: 5%;
+            bottom: 5%;
+
+            margin: 0;
           }
 
           // .item-recipes__social
@@ -1411,6 +1499,40 @@ $margin_slide: 0 0 50px 0;
 
             }
 
+            @media (max-width: 320.8px) {
+
+              &__views:not(:last-child){
+                margin: 0 20px 0 0;
+              }
+
+            }
+
+          }
+
+          @media (max-width: 1253.8px) {
+
+            &__title{
+              width: 65%;
+
+              font-size: 20px;
+            }
+
+          }
+
+          @media (max-width: 1026.8px) {
+
+            &__title{
+              width: 75%;
+            }
+
+          }
+
+          @media (max-width: 936.8px) {
+
+            &__title{
+              width: 85%;
+            }
+
           }
 
           @media (max-width: 855.8px) {
@@ -1423,6 +1545,12 @@ $margin_slide: 0 0 50px 0;
               bottom: 7%;
             }
 
+            &__title{
+              width: 95%;
+
+              font-size: 18px;
+            }
+
           }
 
           @media (max-width: 730.8px) {
@@ -1430,6 +1558,11 @@ $margin_slide: 0 0 50px 0;
             &__data{
               bottom: 83%;
             }
+
+            &__title{
+              font-size: 17px;
+            }
+
 
           }
 
@@ -1455,7 +1588,7 @@ $margin_slide: 0 0 50px 0;
             }
 
             &__title{
-              font-size: 20px;
+              font-size: 19px;
             }
 
           }
@@ -1463,7 +1596,7 @@ $margin_slide: 0 0 50px 0;
           @media (max-width: 430.8px) {
 
             &__title{
-              font-size: 17px;
+              font-size: 16px;
             }
 
           }
@@ -1471,8 +1604,34 @@ $margin_slide: 0 0 50px 0;
           @media (max-width: 380.8px) {
 
             &__title{
-              font-size: 14px;
+              font-size: 15px;
             }
+
+          }
+
+          @media (max-width: 320.8px) {
+
+            &__data, &__link, &__social{
+              position: static;
+            }
+
+            &__wrap{
+              padding: 40px 5px;
+            }
+
+            &__after-name{
+              display: flex;
+            }
+
+            &__data{
+              transform: translate(0, 0);
+              margin: 0 0 25px 0;
+            }
+
+            &__link{
+              margin: 0 0 40px 0;
+            }
+
 
           }
 
@@ -1501,6 +1660,14 @@ $margin_slide: 0 0 50px 0;
 
         &__content-recipes {
           width: 75%;
+        }
+
+      }
+
+      @media (max-width: 320.8px) {
+
+        &__content-recipes {
+          width: 80%;
         }
 
       }
@@ -1545,6 +1712,12 @@ $margin_slide: 0 0 50px 0;
       font-size: 16px;
 
       padding: 30px 0 30px;
+    }
+  }
+
+  @media (max-width: 320.9px) {
+    &__title {
+      font-size: 15px;
     }
   }
 
